@@ -1,0 +1,39 @@
+body {
+  margin: 40px;
+}
+
+#form {
+  margin-bottom: 40px;
+}
+
+#input {
+  padding: 15px;
+  border: 1px solid grey;
+  margin-right: 10px;
+  outline: none;
+}
+
+#btn {
+  width: 150px;
+  height: 50px;
+  color: #fff;
+  background-color: rgb(2, 2, 78);
+}
+
+#list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+#load-more__btn {
+  width: 150px;
+  height: 50px;
+  color: #fff;
+  background-color: rgb(2, 2, 78);
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  display: block;
+}

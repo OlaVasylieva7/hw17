@@ -3,10 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
+    <title>Pagination</title>
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
+    <form id="form">
+      <input
+        type="text"
+        id="input"
+        name="query"
+        placeholder="Search"
+        autocomplete="off"
+      />
+      <button id="btn" type="submit">Search</button>
+    </form>
+
+    <ul id="list"></ul>
+
+    <button id="load-more__btn" type="button">Load more</button>
     <script type="module" src="/main.js"></script>
   </body>
 </html>
