@@ -8,16 +8,16 @@ let currentPage = 1;
 
 function fetchImages(page) {
   fetch(`${apiUrl}&page=${page}`)
-    .then(response => response.json())
-    .then(data => {
+    .then((response) => response.json())
+    .then((data) => {
       if (!Array.isArray(data.hits)) {
-        console.error('data is not an array');
+        console.error("data is not an array");
         return;
       }
 
-      data.hits.forEach(item => {
-        const imageItem = document.createElement('div');
-        imageItem.classList.add('image__item');
+      data.hits.forEach((item) => {
+        const imageItem = document.createElement("div");
+        imageItem.classList.add("image__item");
 
         imageItem.innerHTML = `
           <img src="${item.largeImageURL}" alt="${item.user}">
@@ -28,10 +28,10 @@ function fetchImages(page) {
         imageGallery.appendChild(imageItem);
       });
     })
-    .catch(error => console.error('something went wrong'));
+    .catch((error) => console.error("something went wrong"));
 }
 
-loadMoreBtn.addEventListener('click', () => {
+loadMoreBtn.addEventListener("click", () => {
   currentPage++;
   fetchImages(currentPage);
 });
